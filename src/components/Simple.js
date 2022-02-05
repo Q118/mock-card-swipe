@@ -37,54 +37,55 @@ function Simple() {
 
     return (
         <>
-        <div>
-            <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
-            <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
+            <div>
+                <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
+                <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
 
-            {communities.map((community) =>
-                <TinderCard className='swipe' key={community.id}
-                    onSwipe={(dir) => swiped(dir, community.community_name)}
-                    onCardLeftScreen={() => outOfFrame(community.community_name)}>
-                    {/* call back^ executed when the card leaves */}
-                    <div className='card'>
-                        <Card className='main-card'>
-                            <Card.Header>
-                                <h1 className='card-header'>{community.community_name}</h1>
-                            </Card.Header>
-                            <img
-                                src={community.image_url}
-                                alt='community-avatar'
-                                className='item-img' />
-                            <Card.Content>
-                                <Card.Description>
-                                    <h4>{community.description}</h4>
-                                </Card.Description>
-                                <Card.Meta>
-                                    <span className='date'>Type: {community.community_type}</span>
-                                    <br />
-                                    <span className='date'>Seats Filled: {community.seats_filled}</span>
-                                </Card.Meta>
-                                <div className='buttons btn-group'>
-                                    <Button className="join-btn">
-                                        Join
-                                    </Button>
-                                    {/* <link to={community.community_link === null ? "#" : community.community_link}> */}
+                {communities.map((community) =>
+                    <TinderCard className='swipe' key={community.id}
+                        onSwipe={(dir) => swiped(dir, community.community_name)}
+                        onCardLeftScreen={() => outOfFrame(community.community_name)}>
+                        {/* call back^ executed when the card leaves */}
+                        <div className='card'>
+                            <Card className='main-card'>
+                                <Card.Header>
+                                    <h1 className='card-header'>{community.community_name}</h1>
+                                </Card.Header>
+                                <img
+                                    src={community.image_url}
+                                    alt='community-avatar'
+                                    className='item-img' />
+                                <Card.Content>
+                                    <Card.Description>
+                                        <h4>{community.description}</h4>
+                                    </Card.Description>
+                                    <hr />
+                                    <Card.Meta>
+                                        <span className='date'>Type: {community.community_type}</span>
+                                        <br />
+                                        <span className='date'>Seats Filled: {community.seats_filled}</span>
+                                    </Card.Meta>
+                                    <div className='buttons btn-group'>
+                                        <Button className="join-btn">
+                                            Join
+                                        </Button>
+                                        {/* <link to={community.community_link === null ? "#" : community.community_link}> */}
 
-                                    <Button className='link-btn'>
-                                        <a href={community.community_link === null ? "#" : community.community_link}>
-                                            Community Page
-                                        </a>
-                                    </Button>
-                                    {/* </link> */}
-                                </div>
-                            </Card.Content>
-                        </Card>
-                    </div>
-                </TinderCard>
-            )}
-            {/* </div> */}
-            {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
-        </div>
+                                        <Button className='link-btn'>
+                                            <a href={community.community_link === null ? "#" : community.community_link}>
+                                                Community Page
+                                            </a>
+                                        </Button>
+                                        {/* </link> */}
+                                    </div>
+                                </Card.Content>
+                            </Card>
+                        </div>
+                    </TinderCard>
+                )}
+                {/* </div> */}
+                {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
+            </div>
         </>
     )
 }

@@ -6,7 +6,14 @@
   min-height: 100vh;
   overflow: hidden;
   /* background: linear-gradient(#fff, #999); */
-  background: linear-gradient(#e66465, #9198e5);
+  /* background: linear-gradient(#e66465, #9198e5); */
+  background-image: url('./assets/mock-background.png');
+    background-size: fill;
+}
+
+.wordWrap {
+    word-wrap: break-word;
+    width: 350px;
 }
 
 #root>div {
@@ -51,13 +58,13 @@ h2 {
   position: absolute;
 }
 
-.cardContainer {
-       justify-content: center;
-    align-items: center;
+/* .cardContainer {
+  justify-content: center;
+  align-items: center;
   width: 90vw;
   max-width: 260px;
   height: 300px;
-}
+} */
 
 .item-img {
     height: 200px;
@@ -67,20 +74,21 @@ h2 {
     border-radius: 15px;
   }
 
-.main-card {
+/* .main-card {
     width: 320px;
     height: 415px;
-}
+} */
 
   .card {
   position: relative;
-  background-color: #fff;
-  width: max-content;
+  background-color: #00ff9f;
+  width: fit-content;
   /* max-width: 260px; */
   /* height: 500px; */
   min-height: 350px;
+  max-width: 495px;
   min-width: 495px;
-  height: max-content;
+  height: fit-content;
   box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
   border-radius: 20px;
   background-size: cover;
@@ -109,6 +117,11 @@ h2 {
 /* .swipe:last-of-type {
 
 } */
+
+.card h4 {
+    font-style: italic;
+}
+
 
 .card h3 {
   position: absolute;

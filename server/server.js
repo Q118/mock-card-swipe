@@ -30,7 +30,7 @@ const checkStatus = response => {
 }
 
 const getCommunities = async () => {
-    const response = await fetch('https://api.covey.io/communities?limit=5');
+    const response = await fetch('https://api.covey.io/communities?limit=25');
     try {
         checkStatus(response);
     } catch (error) {
