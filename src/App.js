@@ -11,12 +11,13 @@ function App() {
     return (
         <div className='app'>
             <Simple />
-            <div className='row'>
+            {/* <div className='row'> */}
+\
                 {/* <p style={{ color: '#fff' }}>Show advanced example</p> */}
                  {/* <Switch checked={showAdvanced} onChange={setShowAdvanced} /> */}
             <Cards /> 
             {/* just to see if its rendering */}
-            </div>
+            {/* </div> */}
         </div>
     )
 }

@@ -29,7 +29,7 @@ const Cards = () => {
         <div className='cardContainer'>
             {communities.map((community) =>
                 <Card>
-                    <Image src={community.image_url} wrapped ui={false} />
+                    <Image src={community.image_url} />
                     <Card.Content>
                         <Card.Header>{community.community_name}</Card.Header>
                         <Card.Meta>
