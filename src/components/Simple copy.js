@@ -1,36 +1,34 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
 import { Card, Icon, Image } from 'semantic-ui-react'
 // import Cards from './Cards'
 
-
+const db = [
+    {
+        name: 'Richard Hendricks',
+        url: './img/richard.jpg'
+    },
+    {
+        name: 'Erlich Bachman',
+        url: './img/erlich.jpg'
+    },
+    {
+        name: 'Monica Hall',
+        url: './img/monica.jpg'
+    },
+    {
+        name: 'Jared Dunn',
+        url: './img/jared.jpg'
+    },
+    {
+        name: 'Dinesh Chugtai',
+        url: './img/dinesh.jpg'
+    }
+]
 
 function Simple() {
-    const [hasError, setErrors] = useState(false);
-    const [communities, setCommunities] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:5013/communities" )
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    setCommunities(result);
-                },
-                //  important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
-                (error) => {
-                    console.log(error);
-                    setErrors(true);
-                }
-            )
-    }, [])
-    console.log(communities);
-
-
-
-    // const characters = db
+    const characters = db
     const [lastDirection, setLastDirection] = useState()
 
     const swiped = (direction, nameToDelete) => {
@@ -48,10 +46,10 @@ function Simple() {
             <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
             <h1>React Tinder Card</h1>
             <div className='cardContainer'>
-                {communities.map((community) =>
-                    <TinderCard className='swipe' key={community.id}
-                        onSwipe={(dir) => swiped(dir, community.community_name)}
-                        onCardLeftScreen={() => outOfFrame(community.community_name)}>
+                {characters.map((character) =>
+                    <TinderCard className='swipe' key={character.name}
+                        onSwipe={(dir) => swiped(dir, character.name)}
+                        onCardLeftScreen={() => outOfFrame(character.name)}>
                         {/* call back^ executed when the card leaves */}
                         <div className='card'>
                             <Card className='main-card'>
