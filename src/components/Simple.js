@@ -59,7 +59,7 @@ function Simple() {
                                     <Card.Description>
                                         <h4>{community.description}</h4>
                                     </Card.Description>
-                                    <hr />
+                                    <div className='lower-card'>
                                     <Card.Meta>
                                         <span className='date'>Type: {community.community_type}</span>
                                         <br />
@@ -67,7 +67,7 @@ function Simple() {
                                     </Card.Meta>
                                     <div className='buttons btn-group'>
                                         <Button className="join-btn">
-                                            Join
+                                            JOIN
                                         </Button>
                                         {/* <link to={community.community_link === null ? "#" : community.community_link}> */}
 
@@ -76,6 +76,7 @@ function Simple() {
                                                 Community Page
                                             </a>
                                         </Button>
+                                        </div>
                                         {/* </link> */}
                                     </div>
                                 </Card.Content>
