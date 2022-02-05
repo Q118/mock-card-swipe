@@ -30,7 +30,7 @@ const checkStatus = response => {
 }
 
 const getCommunities = async () => {
-    const response = await fetch('https://api.covey.io/communities?limit=25');
+    const response = await fetch('https://api.covey.io/communities?limit=80');
     try {
         checkStatus(response);
     } catch (error) {
@@ -52,25 +52,6 @@ app.get('/communities', async (req, res) => {
         console.error(error);
     });
 })
-
-// app.post("/communities", async (req, res) => {
-//     await getCommunities()
-//         .then(() => {
-//             // console.log(communities);
-//             // res.send(communities);
-//         }).catch(err => console.error(err));
-// });
-
-
-app.get("/", (req, res) => {
-
-});
-
-
-
-
-
-
 
 app.listen(port, () => console.log("Backend server live on " + port));
 

@@ -30,6 +30,11 @@
   align-items: center;
 }
 
+.members-icon {
+    width: 1.5rem; 
+    height: 1.5rem;
+}
+
 .row {
   flex-direction: row !important;
 }
@@ -146,8 +151,8 @@ h2 {
 
 .join-btn {
     font-family:  'Courier New', Courier, monospace;
-    font-style: normal;
-    font-weight: 500;
+    font-style: bold;
+    /* font-weight: 500; */
     font-size: 12px;
     line-height: 16px;
     border-radius: 2px;
@@ -166,23 +171,14 @@ h2 {
 
 .lower-card {
     background-color: #fff;
+    border-radius: 20px;
+    /* align-items: ; */
 }
 
-/* .buttons button {
-  flex-shrink: 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  font-size: 18px;
-  transition: 200ms;
-  margin: 0 10px;
-  font-weight: bolder;
-  width: 160px;
-  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
-} */
 
 .buttons button:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 @keyframes popup {
