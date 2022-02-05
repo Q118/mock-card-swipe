@@ -36,7 +36,7 @@ const Cards = () => {
                             <span className='date'>Seats Filled: {community.seats_filled}</span>
                         </Card.Meta>
                         <Card.Description>
-                            {community.community_name}
+                            {community.description}
                         </Card.Description>
                     </Card.Content>
                     <Card.Content extra>

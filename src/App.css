@@ -35,6 +35,12 @@ h1 {
   font-family: 'Damion', cursive;
   color: #fff;
   text-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+ 
+}
+
+.section-header {
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
@@ -46,16 +52,18 @@ h2 {
 }
 
 .cardContainer {
+       justify-content: center;
+    align-items: center;
   width: 90vw;
   max-width: 260px;
   height: 300px;
 }
 
 .item-img {
-    height: auto;
+    height: 200px;
     max-height: 250px;
-    width: auto;
-    max-width: 320px;
+    width: 200px;
+    max-width: 300px;
     border-radius: 15px;
   }
 
@@ -67,9 +75,11 @@ h2 {
   .card {
   position: relative;
   background-color: #fff;
-  width: 80vw;
-  max-width: 260px;
+  width: max-content;
+  /* max-width: 260px; */
   /* height: 500px; */
+  min-height: 350px;
+  min-width: 495px;
   height: max-content;
   box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
   border-radius: 20px;
@@ -80,6 +90,20 @@ h2 {
 .cardContent {
   width: 100%;
   height: 100%;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-header {
+  font-family: 'Damion', cursive;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px; */
 }
 
 /* .swipe:last-of-type {
