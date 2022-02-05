@@ -26,10 +26,10 @@ const Cards = () => {
     }, [])
     console.log(communities);
     return (
-        <div className='cardContainer'>
+        <div>
             {communities.map((community) =>
                 <Card>
-                    <Image src={community.image_url} />
+                    <Image src={community.image_url} size="small" />
                     <Card.Content>
                         <Card.Header>{community.community_name}</Card.Header>
                         <Card.Meta>

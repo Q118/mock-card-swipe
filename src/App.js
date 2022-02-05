@@ -12,10 +12,10 @@ function App() {
         <div className='app'>
             <Simple />
             {/* <div className='row'> */}
-\
+
                 {/* <p style={{ color: '#fff' }}>Show advanced example</p> */}
                  {/* <Switch checked={showAdvanced} onChange={setShowAdvanced} /> */}
-            <Cards /> 
+            {/* <Cards />  */}
             {/* just to see if its rendering */}
             {/* </div> */}
         </div>
