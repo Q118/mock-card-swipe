@@ -1,10 +1,5 @@
 create toggle for dark mode
 
-
-smaller sized cards
-
-
-
 make the shadow color like the blueish shadow from their website
 
 

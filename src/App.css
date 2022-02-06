@@ -71,7 +71,9 @@ h2 {
   position: relative;
   background-color: #00ff9f;
   width: fit-content;
-  min-height: 350px;
+  min-height: 450px;
+  /* min-height: max-content; */
+  max-height: 450px;
   max-width: 350px;
   min-width: 350px;
   height: fit-content;
@@ -160,7 +162,7 @@ a {
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     background: rgba(0,255,159,.1);
     border: 1px solid #00ff9f;
 }
@@ -168,6 +170,8 @@ a {
 .lower-card {
     background-color: #fff;
     border-radius: 20px;
+    padding: 3px;
+    /* min-height: auto; */
 }
 
 

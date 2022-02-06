@@ -48,8 +48,8 @@ function Simple() {
                         onSwipe={(dir) => swiped(dir, community.community_name)}
                         onCardLeftScreen={() => outOfFrame(community.community_name)}>
                         {/* call back^ executed when the card leaves */}
-                        <div className='card'>
-                            <Card className='main-card'>
+                        {/* <div className='card'> */}
+                            <Card className='main-card card'>
                                 <Card.Header>
                                     <h1 className='card-header'>{community.community_name}</h1>
                                 </Card.Header>
@@ -63,8 +63,8 @@ function Simple() {
                                     </Card.Description>
                                     <div className='lower-card'>
                                         <Card.Meta>
-                                            <span className='date'>Type: <i>{community.community_type}</i></span>
-                                            <br />
+                                            <span className='date'><strong>Type: </strong><i>{community.community_type}</i></span>
+                                            <br /><br />
                                             <div className='row'>
                                                 <a href={`https://covey.io/${community.community_url}`}
                                                     target="_blank" rel="noreferrer noopener">
@@ -113,7 +113,7 @@ function Simple() {
                                     </div>
                                 </Card.Content>
                             </Card>
-                        </div>
+                        {/* </div> */}
                         <ReactTooltip place="top" className='my-toolTip' />
                     </TinderCard>
 
