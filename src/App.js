@@ -7,16 +7,13 @@ import Simple from './components/Simple'
 
 function App() {
 
-
     return (
-            <div className='app'>
-                <div className='row'>
-                    <Header />
-                </div>
-                <Simple />
-                {/* <p style={{ color: '#fff' }}>Show advanced example</p> */}
-                {/* <Switch checked={showAdvanced} onChange={setShowAdvanced} /> */}
+        <div className='app'>
+            <div className='row'>
+                <Header />
             </div>
+            <Simple />
+        </div>
     )
 }
 
