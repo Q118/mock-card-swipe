@@ -5,7 +5,6 @@ import ReactTooltip from 'react-tooltip';
 
 
 function Simple() {
-    const [hasError, setErrors] = useState(false);
     const [communities, setCommunities] = useState([]);
     const [lastDirection, setLastDirection] = useState()
     useEffect(() => {
@@ -18,7 +17,6 @@ function Simple() {
                 //  important to handle errors here instead of a catch() block so that we don't swallow exceptions from actual bugs in components.
                 (error) => {
                     console.log(error);
-                    setErrors(true);
                 }
             )
     }, [])
