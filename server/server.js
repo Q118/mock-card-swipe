@@ -46,7 +46,7 @@ const getCommunities = async () => {
 
 app.get('/communities', async (req, res) => {
     getCommunities().then(() => {
-        // console.log(communities); //debug
+        console.log(communities); //debug
         res.send(communities);
     }).catch(error => {
         console.error(error);

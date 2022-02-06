@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 // import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card'
 import { Card, Icon, Button } from 'semantic-ui-react'
+import ReactTooltip from 'react-tooltip';
+
 
 
 function Simple() {
@@ -59,46 +61,48 @@ function Simple() {
                                     <Card.Description>
                                         <h4>{community.description}</h4>
                                     </Card.Description>
-                                    <div className='lower-card row'>
+                                    <div className='lower-card'>
                                         <Card.Meta>
-                                            <span className='date'>Type: {community.community_type}</span>
+                                            <span className='date'>Type: <i>{community.community_type}</i></span>
                                             <br />
-                                            <a href={`https://covey.io/${community.community_url}`}
-                                                target="_blank" rel="noreferrer noopener">
+                                            <div className='row'>
+                                                <a href={`https://covey.io/${community.community_url}`}
+                                                    target="_blank" rel="noreferrer noopener">
+                                                    <img
+                                                        className='members-icon'
+                                                        src="https://covey.io/images/communities/members.svg"
+                                                        alt="Members/Seats-Filled" />
+                                                    {community.seats_filled}
+                                                </a>
+                                                <a href={`https://etherscan.io/address/${community.eth_address}`}
+                                                    target="_blank" rel="noreferrer noopener">
+                                                    <img
+                                                        className='members-icon'
+                                                        src="https://covey.io/images/communities/payout.svg"
+                                                        alt="Members/Seats-Filled" />
+                                                    {community.monthly_payout}
+                                                </a>
                                                 <img
-                                                    className='members-icon'
-                                                    src="https://covey.io/images/communities/members.svg"
-                                                    alt="Members/Seats-Filled" />
-                                                {community.seats_filled}
-                                            </a>
-                                            <a href={`https://etherscan.io/address/${community.eth_address}`}
-                                                target="_blank" rel="noreferrer noopener">
-                                                <img
-                                                    className='members-icon'
-                                                    src="https://covey.io/images/communities/payout.svg"
-                                                    alt="Members/Seats-Filled" />
-                                                {community.monthly_payout}
-                                            </a>
-                                            <img
                                                     className='members-icon'
                                                     src="https://covey.io/images/communities/data.svg"
                                                     alt="Users-Display" />
-                                            <img
-                                                    className='members-icon'
-                                                    src="https://covey.io/images/communities/link.svg"
-                                                    alt="Community-Website" />
-                                        </Card.Meta>
-                                        <span className='buttons btn-group'>
-                                            <Button className="join-btn">
-                                                JOIN
-                                            </Button>
-                                            <Button className='link-btn'>
-                                                <a href={community.community_link === null ? "#" : community.community_link}>
-                                                    Community Page
+
+                                                <a href={community.community_link === null ? "/" : community.community_link}
+                                                    target="_blank" rel="noreferrer noopener">
+                                                    <img
+                                                        data-tip="Community Website"
+                                                        className='members-icon'
+                                                        src="https://covey.io/images/communities/link.svg"
+                                                        alt="Community-Website" />
                                                 </a>
-                                            </Button>
-                                        </span>
-                                        {/* </link> */}
+                                                <ReactTooltip place="bottom" className='my-toolTip' />
+                                                <span className='buttons btn-group'>
+                                                    <Button className="join-btn">
+                                                        JOIN
+                                                    </Button>
+                                                </span>
+                                            </div>
+                                        </Card.Meta>
                                     </div>
                                 </Card.Content>
                             </Card>

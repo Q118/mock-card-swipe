@@ -13,3 +13,5 @@ add snumvers of each into the tool tips
 
 
 nav bar
+
+programatically linking out to the links and not directing if no link.. like that article i found on how to
