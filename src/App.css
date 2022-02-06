@@ -145,6 +145,18 @@ h2 {
 a {
   text-decoration: none;
 }
+.mobileNav {
+	position: top; /* Safari */
+	position: sticky !important;
+	top: 0 !important;
+    background-image: url('./assets/CaptureNav.PNG');
+    background-size: cover;
+    /* create row direction */
+    /* display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    align-items: center; */
+}
 
 .join-btn {
     font-family: 'Roboto' 'Mono';

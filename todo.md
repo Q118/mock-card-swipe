@@ -1,7 +1,5 @@
 create toggle for dark mode
 
-make the shadow color like the blueish shadow from their website
-
 
 
 nav bar add 
