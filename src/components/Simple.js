@@ -69,6 +69,7 @@ function Simple() {
                                                 <a href={`https://covey.io/${community.community_url}`}
                                                     target="_blank" rel="noreferrer noopener">
                                                     <img
+                                                        data-tip='Applicants'
                                                         className='members-icon'
                                                         src="https://covey.io/images/communities/members.svg"
                                                         alt="Members/Seats-Filled" />
@@ -77,16 +78,20 @@ function Simple() {
                                                 <a href={`https://etherscan.io/address/${community.eth_address}`}
                                                     target="_blank" rel="noreferrer noopener">
                                                     <img
+                                                        data-tip="Payout Link"
                                                         className='members-icon'
                                                         src="https://covey.io/images/communities/payout.svg"
                                                         alt="Members/Seats-Filled" />
                                                     {community.monthly_payout}
                                                 </a>
-                                                <img
-                                                    className='members-icon'
-                                                    src="https://covey.io/images/communities/data.svg"
-                                                    alt="Users-Display" />
-
+                                                <a href={`https://covey.io/${community.community_url}`}
+                                                    target="_blank" rel="noreferrer noopener">
+                                                    <img
+                                                        data-tip="Users Displayed"
+                                                        className='members-icon'
+                                                        src="https://covey.io/images/communities/data.svg"
+                                                        alt="Users-Display" />
+                                                </a>
                                                 <a href={community.community_link === null ? "/" : community.community_link}
                                                     target="_blank" rel="noreferrer noopener">
                                                     <img
@@ -95,19 +100,23 @@ function Simple() {
                                                         src="https://covey.io/images/communities/link.svg"
                                                         alt="Community-Website" />
                                                 </a>
-                                                <ReactTooltip place="bottom" className='my-toolTip' />
-                                                <span className='buttons btn-group'>
+                                                <a
+                                                data-tip={`Join ${community.community_name}`}
+                                                    href={`https://covey.io/${community.community_url}`}
+                                                    className='btn-group'>
                                                     <Button className="join-btn">
                                                         JOIN
                                                     </Button>
-                                                </span>
+                                                </a>
                                             </div>
                                         </Card.Meta>
                                     </div>
                                 </Card.Content>
                             </Card>
                         </div>
+                        <ReactTooltip place="top" className='my-toolTip' />
                     </TinderCard>
+
                 )}
                 {/* </div> */}
                 {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
