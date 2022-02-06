@@ -3,16 +3,12 @@ import '../App.css';
 
 const Navbar = () => {
     return (
-        <div className='mobileNav'>
-            <header className=" row">
-                <nav className="row">
-                    <img
-                        data-tip='Applicants'
-                        className='members-icon'
-                        src="https://covey.io/images/communities/members.svg"
-                        alt="Members/Seats-Filled" />
-                </nav>
-            </header>
+        <div className='mobileNav row'>
+<img 
+src="https://raw.githubusercontent.com/Q118/mock-card-swipe/main/src/assets/CaptureNav.PNG"
+alt="Covey Logo"
+className='logo'
+/>
         </div>
     );
 };

@@ -3,15 +3,12 @@ import './App.css'
 // import Switch from 'react-ios-switch'
 // import Cards from './components/Cards'
 import Header from './components/header'
-import Navbar from './components/Nav'
 import Simple from './components/Simple'
 
 function App() {
 
 
     return (
-        <>
-            <Navbar />
             <div className='app'>
                 <div className='row'>
                     <Header />
@@ -19,10 +16,7 @@ function App() {
                 <Simple />
                 {/* <p style={{ color: '#fff' }}>Show advanced example</p> */}
                 {/* <Switch checked={showAdvanced} onChange={setShowAdvanced} /> */}
-
-
             </div>
-        </>
     )
 }
 
